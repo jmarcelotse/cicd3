@@ -24,5 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run Prettier
+        uses: creyD/prettier_action@v3.1
+        with:
+          prettier_options: --write **/*.js
+
       - name: Run tests
         run: npm test
